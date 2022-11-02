@@ -1,0 +1,174 @@
+.container {
+    max-width: 800px;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: black;
+    margin: 3% 20%;
+}
+
+.calender {
+    display: flex;
+}
+
+.selector {
+    width: 250px;
+    margin-right: 40px;
+}
+
+#selectFild {
+    width: 100%;
+    padding: 7px 2px;
+    margin-bottom: 30px;
+    box-sizing: border-box;
+    border: 2px solid #000;
+    background: rgba(255, 255, 255, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#selectFild img {
+    width: 50px;
+    transition: transform 0.5s;
+}
+
+p {
+    font-weight: 550;
+}
+
+.options{
+    width: 100%;
+    padding: 15px 0 15px 70px;
+    list-style: none;
+    cursor: pointer;
+    box-sizing: border-box;
+    position: relative;
+}
+.hide {
+    visibility: hidden;
+}
+
+table,
+th,
+td {
+    width: 100%;
+    table-layout: fixed;
+    text-align: center;
+    font-size: 15px;
+    border-collapse: collapse;
+    border: 1px solid black;
+    font-family: sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+tr,
+th,
+td {
+    padding: 20px 3px;
+}
+
+th {
+    color: #000;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+td {
+
+    color: #000;
+}
+
+td:hover {
+    background: rgb(60, 155, 60);
+}
+
+.calender-bottom {
+    display: flex;
+    margin-top: 5%;
+}
+
+input {
+    width: 100%;
+    padding: 22px 50px;
+    margin-bottom: 30px;
+    box-sizing: border-box;
+    border: 2px solid #000;
+    border-radius: none;
+    background: rgba(255, 255, 255, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: space-around; 
+    font-size: 16px;
+    font-weight: bold;
+    color: #000;
+}
+
+.btn {
+    padding: 25px 50px;
+    background-color: rgb(74, 74, 235);
+    color: #fff;
+    border: none;
+    font-size: 15px;
+}
+
+
+@media(max-width : 600px){
+    .container{
+        width: 100%;
+    }
+    .selector {
+        width: 200px;
+        margin-right: 10px;
+    }
+    
+    #selectFild {
+        width: 100%;
+        padding: 5px 2px;
+        margin-bottom: 30px;
+        box-sizing: border-box;
+        border: 2px solid #000;
+        background: rgba(255, 255, 255, 0.7);
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+    
+    #selectFild img {
+        width: 30px;
+        transition: transform 0.5s;
+    }
+    
+    p {
+        font-weight: 400;
+    }
+
+    input {
+        width: 100%;
+        padding: 22px 50px;
+        margin-bottom: 30px;
+        box-sizing: border-box;
+        border: 2px solid #000;
+        border-radius: none;
+        background: rgba(255, 255, 255, 0.7);
+        display: flex;
+        align-items: center;
+        justify-content: space-around; 
+        font-size: 12px;
+        font-weight: bold;
+        color: #000;
+    }
+    .btn {
+        padding: 24px 50px;
+        background-color: rgb(74, 74, 235);
+        color: #fff;
+        border: none;
+        font-size: 12px;
+    }
+    table,
+th,
+td {
+    width: 80%;
+}
+    
+}
