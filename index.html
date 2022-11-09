@@ -13,50 +13,43 @@
     <div class="container">
         <div class="calender">
             <div class="selector">
-                <div id="selectFild">
-                    <p id="selectText">Select Month</p>
-                    <img src="images/dropdown.png" id="arrowIcon">
+                <button class="dropbtn" id="change" onclick="selectFunction()">Select Month
+                  <img src="images/dropdown.png" id="arrowIcon">
+                </button>
+                <div class="dropdown-content" id="myDropdown">
+                  <a href="#">January</a>
+                  <a href="#">February</a>
+                  <a href="#">March</a>
+                  <a href="#">April</a>
+                  <a href="#">May</a>
+                  <a href="#">June</a>
+                  <a href="#">July</a>
+                  <a href="#">August</a>
+                  <a href="#">September</a>
+                  <a href="#">October</a>
+                  <a href="#">November</a>
+                  <a href="#">December</a>
                 </div>
-                <ul id="list" class="hide">
-                    <li class="options">
-                        <p>January</p>
-                    </li>
-                    <li class="options">
-                        <p>February</p>
-                    </li>
-                    <li class="options">
-                        <p>March</p>
-                    </li>
-                    <li class="options">
-                        <p>April</p>
-                    </li>
-                    <li class="options">
-                        <p>May</p>
-                    </li>
-                </ul>
+                </div> 
             </div>
             <div class="selector">
-                <div id="selectFild" >
-                    <p id="selectText">Select Year</p>
+                <button class="dropbtn" onclick="selectFunction()">Select Year
                     <img src="images/dropdown.png" id="arrowIcon">
-                </div>
-                <ul id="list" class="hide">
-                    <li class="options">
-                        <p>2018</p>
-                    </li>
-                    <li class="options">
-                        <p>2019</p>
-                    </li>
-                    <li class="options">
-                        <p>2020</p>
-                    </li>
-                    <li class="options">
-                        <p>2021</p>
-                    </li>
-                    <li class="options">
-                        <p>2022</p>
-                    </li>
-                </ul>
+                  </button>
+                  <div class="dropdown-content" id="myDropdown">
+                    <a href="#">2011</a>
+                    <a href="#">2012</a>
+                    <a href="#">2013</a>
+                    <a href="#">2014</a>
+                    <a href="#">2015</a>
+                    <a href="#">2016</a>
+                    <a href="#">2017</a>
+                    <a href="#">2018</a>
+                    <a href="#">2019</a>
+                    <a href="#">2020</a>
+                    <a href="#">2021</a>
+                    <a href="#">2022</a>
+                  </div>
             </div>
         </div>
         <table>
@@ -127,32 +120,38 @@
 
         <div class="calender-bottom">
             <div class="selector">
-                <input type="text" placeholder="Enter Any Date">
+                <input type="text" id="selectDate" placeholder="Enter Any Date">
             </div>
             <div class="selector">
-               <button class="btn">ENTER</button>
+               <button class="btn" id="button" onclick="myFunction()">ENTER</button>
             </div>
         </div>
     </div>
 </body>
 
+
 <script>
-    var selectFild = document.getElementById("selectFild");
-    var options = document.getElementsByClassName("options");
-    var selectText = document.getElementById("selectText");
-    var arrowIcon = document.getElementById("arrowIcon");
-    var list = document.getElementById("list");
-    selectFild.onclick = function(){
-        list.classList.toggle("hide");
-        arrowIcon.classList.toggle("rotate");
+    
+    function myFunction() {
+  var x = document.getElementById("selectDate").value;
+  document.getElementById("button").innerHTML = "You selected: " + x;
     }
 
-    for(Option of options){
-        Option.onclick = function(){
-            selectText.innerHTML = this.textContent;
-            list.classList.toggle("hide");
-            arrowIcon.classList.toggle("rotate");
-        }
+    function selectFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
     }
+  }
+}
 </script>
 </html>
