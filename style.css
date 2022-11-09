@@ -3,9 +3,9 @@
     font-family: sans-serif;
     font-weight: bold;
     color: black;
-    margin: 3% 20%;
+    margin: 1% 20%;
     display: flex;
-    margin-left: 140px;
+    margin-left: 300px;
 }
 
 .calender {
@@ -96,9 +96,9 @@ p {
 table,
 th,
 td {
-    width: 80%;
+    width: 50%;
     table-layout: fixed;
-    margin-left: 140px;
+    margin-left:  300px;
     text-align: center;
     font-size: 15px;
     border-collapse: collapse;
@@ -131,8 +131,8 @@ td:hover {
 
 .calender-bottom {
     display: flex;
-    margin-top: 5%;
-    margin-left: 140px;
+    margin-top: 3%;
+    margin-left:  300px;
 }
 
 input {
