@@ -3,9 +3,7 @@
     font-family: sans-serif;
     font-weight: bold;
     color: black;
-    margin: 1% 20%;
-    display: flex;
-    margin-left: 300px;
+    margin: 3% 20%;
 }
 
 .calender {
@@ -15,11 +13,13 @@
 .selector {
     width: 250px;
     margin-right: 40px;
+    display: flex;
+    column-gap: 40px;
 }
 
-.dropbtn {
-    width: 240px;
-    height: 65px;
+.selectyear, .selectmonth {
+    width: 250px;
+    height: 70px;
     padding: 7px 2px;
     margin-bottom: 30px;
     box-sizing: border-box;
@@ -27,58 +27,10 @@
     background: rgba(255, 255, 255, 0.7);
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
+    font-family: sans-serif;
     font-weight: bold;
-    font-size: 16px;
-}
-
- img {
-    width: 50px;
-    transition: transform 0.5s;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-  }
-  
-  .dropdown-content a {
-    float: none;
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-  }
-  
-  .dropdown-content a:hover {
-    background-color: #ddd;
-  }
-  
-  .dropdown-content b {
-    float: none;
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-  }
-  
-  .dropdown-content b:hover {
-    background-color: #ddd;
-  }
-
-  .show {
-    display: block;
-  }
-
-
-p {
-    font-weight: 550;
+    font-size: 18px;
 }
 
 .options{
@@ -89,6 +41,7 @@ p {
     box-sizing: border-box;
     position: relative;
 }
+
 .hide {
     visibility: hidden;
 }
@@ -96,9 +49,8 @@ p {
 table,
 th,
 td {
-    width: 50%;
+    width: 100%;
     table-layout: fixed;
-    margin-left:  300px;
     text-align: center;
     font-size: 15px;
     border-collapse: collapse;
@@ -121,18 +73,12 @@ th {
 }
 
 td {
-
     color: #000;
-}
-
-td:hover {
-    background: rgb(60, 155, 60);
 }
 
 .calender-bottom {
     display: flex;
-    margin-top: 3%;
-    margin-left:  300px;
+    margin-top: 5%;
 }
 
 input {
@@ -152,7 +98,8 @@ input {
 }
 
 .btn {
-    padding: 25px 50px;
+    height: 67px;
+    padding: 22px 50px;
     background-color: rgb(74, 74, 235);
     color: #fff;
     border: none;
@@ -168,9 +115,9 @@ input {
         margin-right: 10px;
     }
     
-    .dropbtn {
-        width: 240px;
-        height: 65px;
+    .selectyear, .selectmonth {
+        width: 150px;
+        height: 70px;
         padding: 7px 2px;
         margin-bottom: 30px;
         box-sizing: border-box;
@@ -178,66 +125,10 @@ input {
         background: rgba(255, 255, 255, 0.7);
         display: flex;
         align-items: center;
-        justify-content: space-around;
+        justify-content: space-between;
+        font-family: sans-serif;
         font-weight: bold;
-        font-size: 16px;
-    }
-    
-     img {
-        width: 50px;
-        transition: transform 0.5s;
-    }
-    
-    .dropdown-content {
-        display: none;
-        position: absolute;
-        background-color: #f9f9f9;
-        min-width: 160px;
-        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-        z-index: 1;
-      }
-      
-      .dropdown-content a {
-        float: none;
-        color: black;
-        padding: 12px 16px;
-        text-decoration: none;
-        display: block;
-        text-align: left;
-      }
-      
-      .dropdown-content a:hover {
-        background-color: #ddd;
-      }
-
-      .dropdown-content1 {
-        display: none;
-        position: absolute;
-        background-color: #f9f9f9;
-        min-width: 160px;
-        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-        z-index: 1;
-      }
-      
-      .dropdown-content1 a {
-        float: none;
-        color: black;
-        padding: 12px 16px;
-        text-decoration: none;
-        display: block;
-        text-align: left;
-      }
-      
-      .dropdown-content1 a:hover {
-        background-color: #ddd;
-      }
-    
-      .show {
-        display: block;
-      }
-    
-    p {
-        font-weight: 400;
+        font-size: 12px;
     }
 
     input {
@@ -255,18 +146,35 @@ input {
         font-weight: bold;
         color: #000;
     }
-
     .btn {
-        padding: 24px 50px;
+        height: 62px;
+        padding: 22px 50px;
         background-color: rgb(74, 74, 235);
         color: #fff;
         border: none;
         font-size: 12px;
     }
+
+    table,
+th,
+td {
+    width: 100%;
+    table-layout: fixed;
+    text-align: center;
+    font-size: 12px;
+    border-collapse: collapse;
+    border: 1px solid black;
+    font-family: sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
+}
     table,
 th,
 td {
     width: 80%;
+}
+th{
+    font-weight: bold;
 }
     
 }
